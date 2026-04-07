@@ -1,0 +1,30 @@
+[project]
+name = "serverest-robot-framework"
+version = "0.1.0"
+description = "API Testing for ServeRest using Robot Framework."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+authors = [
+    { name = "Ney Backes" }
+]
+dependencies = [
+    "robotframework>=7.0,<8.0",
+    "robotframework-requests>=0.9.7,<0.10.0",
+    "robotframework-faker>=5.0.0,<6.0.0",
+    "requests>=2.32.0,<3.0.0",
+    "faker>=37.0.0,<38.0.0",
+]
+[dependency-groups]
+dev = [
+    "taskipy (>=1.14.1,<2.0.0)"
+] 
+
+[tool.taskipy.tasks]
+test = "robot --outputdir=reports tests/"
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
