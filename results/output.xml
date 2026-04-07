@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.0 on win32)" generated="2026-04-06T23:18:55.568815" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\projetos\serverest_robot_framework\tests">
+<suite id="s1-s1" name="Carrinhos Test" source="D:\projetos\serverest_robot_framework\tests\carrinhos_test.robot">
+<kw name="Criar Sessao" owner="common" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-06T23:18:59.880476" level="INFO">Creating Session using : alias=serverest, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>serverest</arg>
+<arg>${base_uri}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-06T23:18:59.879840" elapsed="0.001191"/>
+</kw>
+<status status="PASS" start="2026-04-06T23:18:59.877946" elapsed="0.003316"/>
+</kw>
+<test id="s1-s1-t1" name="Cenario: POST Carrinho 201" line="17">
+<kw name="Iniciar cores de resposta" owner="common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.884126" level="INFO">${red} = [31m</msg>
+<var>${red}</var>
+<arg>${RED}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.883300" elapsed="0.000900"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.885062" level="INFO">${red} = [31m</msg>
+<arg>${red}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.884515" elapsed="0.000624"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.885918" level="INFO">${yellow} = [33m</msg>
+<var>${yellow}</var>
+<arg>${YELLOW}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.885359" elapsed="0.000715"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.887932" level="INFO">${yellow} = [33m</msg>
+<arg>${yellow}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.886640" elapsed="0.001569"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.889853" level="INFO">${green} = [32m</msg>
+<var>${green}</var>
+<arg>${GREEN}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.888752" elapsed="0.001225"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:18:59.891594" level="INFO">${green} = [32m</msg>
+<arg>${green}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:18:59.890555" elapsed="0.001150"/>
+</kw>
+<status status="PASS" start="2026-04-06T23:18:59.882706" elapsed="0.009133"/>
+</kw>
+<kw name="POST Login Valido Usando FUNCAO" owner="login_keywords">
+<kw name="Login Padrao" owner="library_python">
+<msg time="2026-04-06T23:19:04.016053" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</msg>
+<var>${json}</var>
+<status status="FAIL" start="2026-04-06T23:18:59.892788" elapsed="4.159580">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${payload}</var>
+<arg>${json}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:04.052718" elapsed="0.000045"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${payload}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:04.053060" elapsed="0.000060"/>
+</kw>
+<kw name="POST Endpoint /login" owner="login_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.053592" elapsed="0.000077"/>
+</kw>
+<status status="FAIL" start="2026-04-06T23:18:59.892345" elapsed="4.161585">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</kw>
+<kw name="POST Cadastro Carrinho Estatico Valido" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.054663" elapsed="0.000071"/>
+</kw>
+<kw name="Imprimir Carrinho Response.Content" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.055302" elapsed="0.000042"/>
+</kw>
+<kw name="Resposta Carrinho Cadastrado" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.055879" elapsed="0.000052"/>
+</kw>
+<kw name="validar Status Code &quot;201&quot;" owner="common" source_name="validar Status Code &quot;${statuscode}&quot;">
+<status status="NOT RUN" start="2026-04-06T23:19:04.056458" elapsed="0.000051"/>
+</kw>
+<kw name="DELETE Endpoint /carrinhos Cancelar Compra" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.056901" elapsed="0.000044"/>
+</kw>
+<kw name="Imprimir Delete Carrinhos Response.Content" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:04.057385" elapsed="0.000042"/>
+</kw>
+<tag>POST_CARRINHO</tag>
+<status status="FAIL" start="2026-04-06T23:18:59.881408" elapsed="4.176457">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</test>
+<test id="s1-s1-t2" name="Cenario: POST Carrinho Produto Duplicado 400" line="28">
+<kw name="Iniciar cores de resposta" owner="common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.061509" level="INFO">${red} = [31m</msg>
+<var>${red}</var>
+<arg>${RED}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.060721" elapsed="0.000846"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.062371" level="INFO">${red} = [31m</msg>
+<arg>${red}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.061852" elapsed="0.000598"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.063308" level="INFO">${yellow} = [33m</msg>
+<var>${yellow}</var>
+<arg>${YELLOW}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.062696" elapsed="0.000679"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.064284" level="INFO">${yellow} = [33m</msg>
+<arg>${yellow}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.063710" elapsed="0.000650"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.065116" level="INFO">${green} = [32m</msg>
+<var>${green}</var>
+<arg>${GREEN}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.064573" elapsed="0.000603"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:04.066591" level="INFO">${green} = [32m</msg>
+<arg>${green}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:04.065881" elapsed="0.000822"/>
+</kw>
+<status status="PASS" start="2026-04-06T23:19:04.060323" elapsed="0.006481"/>
+</kw>
+<kw name="POST Login Valido Usando FUNCAO" owner="login_keywords">
+<kw name="Login Padrao" owner="library_python">
+<msg time="2026-04-06T23:19:08.162716" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</msg>
+<var>${json}</var>
+<status status="FAIL" start="2026-04-06T23:19:04.067706" elapsed="4.104015">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${payload}</var>
+<arg>${json}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:08.171990" elapsed="0.000055"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${payload}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:08.172204" elapsed="0.000024"/>
+</kw>
+<kw name="POST Endpoint /login" owner="login_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:08.172491" elapsed="0.000032"/>
+</kw>
+<status status="FAIL" start="2026-04-06T23:19:04.067282" elapsed="4.105383">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</kw>
+<kw name="POST Cadastro Carrinho Produto Repetido" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:08.173512" elapsed="0.000084"/>
+</kw>
+<kw name="Imprimir Carrinho Response.Content" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:08.183485" elapsed="0.000062"/>
+</kw>
+<kw name="Resposta Carrinho Produto Duplicado" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:08.184036" elapsed="0.000080"/>
+</kw>
+<kw name="validar Status Code &quot;400&quot;" owner="common" source_name="validar Status Code &quot;${statuscode}&quot;">
+<status status="NOT RUN" start="2026-04-06T23:19:08.184770" elapsed="0.000072"/>
+</kw>
+<tag>POST_CARRINHO_PRODUTO_DUPLICADO</tag>
+<status status="FAIL" start="2026-04-06T23:19:04.059307" elapsed="4.126073">ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /usuarios (Caused by NewConnectionError("HTTPConnection(host='localhost', port=3000): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"))</status>
+</test>
+<test id="s1-s1-t3" name="Cenario: POST Carrinho Carrinho Já Cadastrado 400" line="37">
+<kw name="Iniciar cores de resposta" owner="common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.188558" level="INFO">${red} = [31m</msg>
+<var>${red}</var>
+<arg>${RED}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.188023" elapsed="0.000588"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.189323" level="INFO">${red} = [31m</msg>
+<arg>${red}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.188837" elapsed="0.000560"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.190094" level="INFO">${yellow} = [33m</msg>
+<var>${yellow}</var>
+<arg>${YELLOW}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.189613" elapsed="0.000521"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.190702" level="INFO">${yellow} = [33m</msg>
+<arg>${yellow}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.190330" elapsed="0.000428"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.191502" level="INFO">${green} = [32m</msg>
+<var>${green}</var>
+<arg>${GREEN}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.190947" elapsed="0.000605"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-04-06T23:19:08.192193" level="INFO">${green} = [32m</msg>
+<arg>${green}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-04-06T23:19:08.191770" elapsed="0.000495"/>
+</kw>
+<status status="PASS" start="2026-04-06T23:19:08.187640" elapsed="0.004715"/>
+</kw>
+<kw name="POST Login Valido Usando FUNCAO" owner="login_keywords">
+<kw name="Login Padrao" owner="library_python">
+<var>${json}</var>
+<status status="FAIL" start="2026-04-06T23:19:08.193974" elapsed="4.128142">Execution terminated by signal</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${payload}</var>
+<arg>${json}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:12.322566" elapsed="0.000073"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${payload}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-06T23:19:12.323015" elapsed="0.000063"/>
+</kw>
+<kw name="POST Endpoint /login" owner="login_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.323574" elapsed="0.000082"/>
+</kw>
+<status status="FAIL" start="2026-04-06T23:19:08.193133" elapsed="4.130743">Execution terminated by signal</status>
+</kw>
+<kw name="POST Cadastro Carrinho Estatico Valido" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.352597" elapsed="0.000110"/>
+</kw>
+<kw name="POST Cadastro Carrinho Estatico Valido" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.353416" elapsed="0.000089"/>
+</kw>
+<kw name="Imprimir Carrinho Response.Content" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.354375" elapsed="0.000073"/>
+</kw>
+<kw name="Reposta Um carrinho Por Cadastro" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.355069" elapsed="0.000079"/>
+</kw>
+<kw name="validar Status Code &quot;400&quot;" owner="common" source_name="validar Status Code &quot;${statuscode}&quot;">
+<status status="NOT RUN" start="2026-04-06T23:19:12.355789" elapsed="0.000065"/>
+</kw>
+<kw name="DELETE Endpoint /carrinhos Cancelar Compra" owner="carrinhos_keywords">
+<status status="NOT RUN" start="2026-04-06T23:19:12.356359" elapsed="0.000062"/>
+</kw>
+<tag>POST_CARRINHO_DUPLICIDADE</tag>
+<status status="FAIL" start="2026-04-06T23:19:08.186771" elapsed="4.170013">Execution terminated by signal</status>
+</test>
+<test id="s1-s1-t4" name="Cenario: POST Carrinho Produto Nao Encontrado 400" line="48">
+<tag>POST_CARRINHO_PRODUTO_NAO_ENCONTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.358278" elapsed="0.001552">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t5" name="Cenario: POST Carrinho Produto Insuficiente 400" line="57">
+<tag>POST_CARRINHO_PRODUTO_INSUFICIENTE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.360965" elapsed="0.000634">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t6" name="Cenario: POST Carrinho Token Invalido 401" line="66">
+<tag>POST_CARRINHO_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.362417" elapsed="0.000643">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t7" name="Cenario: POST Carrinho Token Usuario Excluido 401" line="75">
+<tag>POST_TOKEN_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.363953" elapsed="0.000644">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t8" name="Cenario: GET Listar Carrinhos 200" line="86">
+<tag>GET_LISTAR_CARRINHOS</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.365535" elapsed="0.000738">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t9" name="Cenario: GET Listar Carrinho ID 200" line="93">
+<tag>GET_PRODUTO_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.367078" elapsed="0.000805">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t10" name="Cenario: GET Listar Carrinho Sem ID 400" line="100">
+<tag>GET_PRODUTO_SEM_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.376918" elapsed="0.004548">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t11" name="Cenario: DELETE Cancelar Compra 401" line="107">
+<tag>DELETE_CANCELAR_COMPRA</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.383903" elapsed="0.000859">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t12" name="Cenario: DELETE Cancelar Sem Carrinho Cadastrado 200" line="116">
+<tag>DELETE_CANCELAR_COMPRA_CARRINHO_NAO_CADASTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.385656" elapsed="0.000676">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t13" name="Cenario: DELETE Cancelar Token Invalido 401" line="125">
+<tag>DELETE_CANCELAR_COMPRA_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.387132" elapsed="0.000836">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t14" name="Cenario: DELETE Cancelar Token Usuario Excluido 401" line="134">
+<tag>DELETE_COMPRA_TOKEN_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.389612" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t15" name="Cenario: DELETE Concluir Compra 200" line="145">
+<tag>DELETE_CONCLUIR_COMPRA</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.391484" elapsed="0.000790">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t16" name="Cenario: DELETE Concluir Compra Sem Carrinho Cadastrado 200" line="155">
+<tag>DELETE_CONCLUIR_COMPRA_CARRINHO_NAO_CADASTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.393437" elapsed="0.000887">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t17" name="Cenario: DELETE Concluir Token Invalido 401" line="164">
+<tag>DELETE_CONCLUIR_COMPRA_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.395567" elapsed="0.000921">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t18" name="Cenario: DELETE Concluir Token Usuario Excluido 401" line="174">
+<tag>DELETE_COMPRA_TOKEN_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.397690" elapsed="0.001018">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Arquivos de teste para o endpoint de /carrinhos</doc>
+<status status="FAIL" start="2026-04-06T23:18:55.956616" elapsed="16.443867"/>
+</suite>
+<suite id="s1-s2" name="Login Test" source="D:\projetos\serverest_robot_framework\tests\login_test.robot">
+<test id="s1-s2-t1" name="Cenario: POST Realizar Login 200" line="18">
+<tag>POST_LOGIN</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.405721" elapsed="0.001164">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t2" name="Cenario: POST Realizar Login Invalido 401" line="26">
+<tag>POST_LOGIN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.410059" elapsed="0.001031">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t3" name="Cenario: POST Realizar Login Sem Senha 400" line="34">
+<tag>POST_LOGIN_SEM_SENHA</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.412069" elapsed="0.000853">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t4" name="Cenario: POST Realizar Login Sem Email 400" line="42">
+<tag>POST_LOGIN_SEM_EMAIL</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.414258" elapsed="0.000975">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Arquivos de teste para o endpoint de /login</doc>
+<status status="FAIL" start="2026-04-06T23:19:12.403979" elapsed="0.012511"/>
+</suite>
+<suite id="s1-s3" name="Produtos Test" source="D:\projetos\serverest_robot_framework\tests\produtos_test.robot">
+<test id="s1-s3-t1" name="Cenario: POST Produto 201" line="17">
+<tag>POST_PRODUTO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.421629" elapsed="0.000923">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t2" name="Cenario: POST Produto Repetido 400" line="27">
+<tag>POST_PRODUTREPETIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.423635" elapsed="0.000850">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t3" name="Cenario: POST Produto Token Invalido 401" line="36">
+<tag>POST_PRODUTO_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.425316" elapsed="0.000897">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t4" name="Cenario: POST Produto Token Usuario Excluido 401" line="45">
+<tag>POST_TOKEN_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.427208" elapsed="0.000704">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t5" name="Cenario: POST Produto ADM False 403" line="56">
+<tag>POST_PRODUTO_ADM_FALSE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.428870" elapsed="0.000664">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t6" name="Cenario: GET Listar Produtos 200" line="67">
+<tag>GET_PRODUTOS</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.430450" elapsed="0.000696">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t7" name="Cenario: GET Listar Produto ID 200" line="75">
+<tag>GET_PRODUTO_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.432165" elapsed="0.000645">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t8" name="Genario: GET Listar Produto ID Não Encontrado 400" line="82">
+<tag>GET_PRODUTO_ID_NAO_ENCONTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.434110" elapsed="0.001935">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t9" name="Cenario; PUT Alterar Produto Cadastrado 200" line="90">
+<tag>PUT_PRODUTO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.438792" elapsed="0.001674">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t10" name="Cenario: PUT Alterar Produto Sem ID 201" line="100">
+<tag>PUT_PRODUTO_SEM_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.442007" elapsed="0.001183">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t11" name="Cenario: PUT Alterar Produto Nome Repetido 400" line="109">
+<tag>PUT_PRODUTO_NOME_REPETIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.444710" elapsed="0.001008">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t12" name="Cenario: PUT Alterar Produto Token Invalido 401" line="118">
+<tag>PUT_PRODUTO_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.446664" elapsed="0.000650">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t13" name="Cenario: PUT Alterar Produto Token Usuario Excluido 401" line="126">
+<tag>PUT_PRODUTO_TOKEN_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.448133" elapsed="0.000851">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t14" name="Cenario: PUT Alterar Produto ADM False 403" line="136">
+<tag>PUT_PRODUTO_ADM_FALSE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.450298" elapsed="0.000929">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t15" name="Cenario: DELETE Produto Cadastrado 200" line="146">
+<tag>DELETE_PRODUTO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.452762" elapsed="0.001949">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t16" name="Cenario: DELETE Excluir Produto ID Inexistente 200" line="156">
+<tag>DELETE_PRODUTO_ID_INEXISTENTE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.457037" elapsed="0.000913">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t17" name="Cenario: DELETE Excluir Produto Carrinho Cadastrado 400" line="165">
+<tag>DELETE_PRODUTO_CARRINHO_CADASTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.458825" elapsed="0.000872">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t18" name="Cenario: DELETE Excluiar Produto Token Invalido 401" line="174">
+<tag>DELETE_PRODUTO_TOKEN_INVALIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.460923" elapsed="0.000858">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t19" name="Cenario: DELETE Token Usuario Excluido 401" line="183">
+<tag>DELETE_PRODUTO_TOKE_USUARIO_EXCLUIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.463129" elapsed="0.000906">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t20" name="Cenario: DELETE Produto ADM False 403" line="194">
+<tag>DELETE_PRODUTO_ADM_FALSE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.464752" elapsed="0.000812">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Arquivos de teste para o endpoint de /produtos</doc>
+<status status="FAIL" start="2026-04-06T23:19:12.420586" elapsed="0.046163"/>
+</suite>
+<suite id="s1-s4" name="User Test" source="D:\projetos\serverest_robot_framework\tests\user_test.robot">
+<test id="s1-s4-t1" name="Cenario: POST Cadastrar Usuario 201" line="16">
+<tag>POST_USUARIO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.469871" elapsed="0.000671">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t2" name="Cenario: POST Cadastrar Usuario Email Repetido 400" line="26">
+<tag>POST_USUARIO_EMAIL_REPETIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.475311" elapsed="0.001200">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t3" name="Cenario: GET LIstar Usuarios 200" line="34">
+<tag>GET_USUARIOS</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.477515" elapsed="0.000613">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t4" name="Genario: GET Listar Usuario ID 200" line="40">
+<tag>GET_USUARIO_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.478964" elapsed="0.000951">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t5" name="Genario: GET Listar Usuario ID Não Encontrado 400" line="46">
+<tag>GET_USUARIO_ID_NAO_ENCONTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.481103" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t6" name="Cenario: PUT Alterar Cadastro Usuario 200" line="54">
+<tag>PUT_USUARIO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.483735" elapsed="0.002023">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t7" name="Cenario: PUT Alterar Cadastro Sem ID 201" line="63">
+<tag>PUT_USUARIO_SEM_ID</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.487261" elapsed="0.001396">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t8" name="Cenario: PUT Alterar Cadastro Email Repeito 400" line="72">
+<tag>PUT_USUARIO_EMAIL_REPETIDO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.490146" elapsed="0.001145">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t9" name="Cenario: DELETE Excluir Usuario 200" line="81">
+<tag>DELETE_USUARIO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.492887" elapsed="0.001040">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t10" name="Cenario: DELETE Excluir Usuario ID Inexistente 200" line="90">
+<tag>DELETE_USUARIO_ID_INEXISTENTE</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.494944" elapsed="0.000703">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t11" name="Cenario: DELETE Excluir Usuario Carrinho Cadastrado 400" line="98">
+<tag>DELETE_USUARIO_CARRINHO_CADASTRADO</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2026-04-06T23:19:12.496687" elapsed="0.000704">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Arquivos de teste para o endpoint de /usuarios</doc>
+<status status="FAIL" start="2026-04-06T23:19:12.468816" elapsed="0.029525"/>
+</suite>
+<status status="FAIL" start="2026-04-06T23:18:55.572168" elapsed="16.928240"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="53" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="3" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CANCELAR_COMPRA</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CANCELAR_COMPRA_CARRINHO_NAO_CADASTRADO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CANCELAR_COMPRA_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="2" skip="0">DELETE_COMPRA_TOKEN_USUARIO_EXCLUIDO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CONCLUIR_COMPRA</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CONCLUIR_COMPRA_CARRINHO_NAO_CADASTRADO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_CONCLUIR_COMPRA_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO_ADM_FALSE</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO_CARRINHO_CADASTRADO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO_ID_INEXISTENTE</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_PRODUTO_TOKE_USUARIO_EXCLUIDO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_USUARIO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_USUARIO_CARRINHO_CADASTRADO</stat>
+<stat pass="0" fail="1" skip="0">DELETE_USUARIO_ID_INEXISTENTE</stat>
+<stat pass="0" fail="1" skip="0">GET_LISTAR_CARRINHOS</stat>
+<stat pass="0" fail="2" skip="0">GET_PRODUTO_ID</stat>
+<stat pass="0" fail="1" skip="0">GET_PRODUTO_ID_NAO_ENCONTRADO</stat>
+<stat pass="0" fail="1" skip="0">GET_PRODUTOS</stat>
+<stat pass="0" fail="1" skip="0">GET_PRODUTO_SEM_ID</stat>
+<stat pass="0" fail="1" skip="0">GET_USUARIO_ID</stat>
+<stat pass="0" fail="1" skip="0">GET_USUARIO_ID_NAO_ENCONTRADO</stat>
+<stat pass="0" fail="1" skip="0">GET_USUARIOS</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO_DUPLICIDADE</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO_PRODUTO_DUPLICADO</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO_PRODUTO_INSUFICIENTE</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO_PRODUTO_NAO_ENCONTRADO</stat>
+<stat pass="0" fail="1" skip="0">POST_CARRINHO_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">POST_LOGIN</stat>
+<stat pass="0" fail="1" skip="0">POST_LOGIN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">POST_LOGIN_SEM_EMAIL</stat>
+<stat pass="0" fail="1" skip="0">POST_LOGIN_SEM_SENHA</stat>
+<stat pass="0" fail="1" skip="0">POST_PRODUTO</stat>
+<stat pass="0" fail="1" skip="0">POST_PRODUTO_ADM_FALSE</stat>
+<stat pass="0" fail="1" skip="0">POST_PRODUTO_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">POST_PRODUTREPETIDO</stat>
+<stat pass="0" fail="2" skip="0">POST_TOKEN_USUARIO_EXCLUIDO</stat>
+<stat pass="0" fail="1" skip="0">POST_USUARIO</stat>
+<stat pass="0" fail="1" skip="0">POST_USUARIO_EMAIL_REPETIDO</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO_ADM_FALSE</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO_NOME_REPETIDO</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO_SEM_ID</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO_TOKEN_INVALIDO</stat>
+<stat pass="0" fail="1" skip="0">PUT_PRODUTO_TOKEN_USUARIO_EXCLUIDO</stat>
+<stat pass="0" fail="1" skip="0">PUT_USUARIO</stat>
+<stat pass="0" fail="1" skip="0">PUT_USUARIO_EMAIL_REPETIDO</stat>
+<stat pass="0" fail="1" skip="0">PUT_USUARIO_SEM_ID</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="53" skip="0">Tests</stat>
+<stat name="Carrinhos Test" id="s1-s1" pass="0" fail="18" skip="0">Tests.Carrinhos Test</stat>
+<stat name="Login Test" id="s1-s2" pass="0" fail="4" skip="0">Tests.Login Test</stat>
+<stat name="Produtos Test" id="s1-s3" pass="0" fail="20" skip="0">Tests.Produtos Test</stat>
+<stat name="User Test" id="s1-s4" pass="0" fail="11" skip="0">Tests.User Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-04-06T23:18:59.795872" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\common\common.robot' on line 45: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.800449" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.801008" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 19: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.801562" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 24: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.802163" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 33: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.802912" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 41: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.803502" level="WARN">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 49: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-04-06T23:18:59.827504" level="ERROR">Error in file 'D:\projetos\serverest_robot_framework\support\fixtures\dynamics.robot' on line 3: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'pkg_resources'
+Traceback (most recent call last):
+  File "D:\projetos\serverest_robot_framework\.venv\Lib\site-packages\FakerLibrary\__init__.py", line 1, in &lt;module&gt;
+    import pkg_resources
+PYTHONPATH:
+  D:\projetos\serverest_robot_framework\.venv\Scripts\robot.exe
+  C:\Users\Ney Backes\.pyenv\pyenv-win\versions\3.13.0\python313.zip
+  C:\Users\Ney Backes\.pyenv\pyenv-win\versions\3.13.0\DLLs
+  C:\Users\Ney Backes\.pyenv\pyenv-win\versions\3.13.0\Lib
+  C:\Users\Ney Backes\.pyenv\pyenv-win\versions\3.13.0
+  D:\projetos\serverest_robot_framework\.venv
+  D:\projetos\serverest_robot_framework\.venv\Lib\site-packages</msg>
+</errors>
+</robot>
