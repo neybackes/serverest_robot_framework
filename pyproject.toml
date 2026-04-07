@@ -20,8 +20,7 @@ dev = [
 ] 
 
 [tool.taskipy.tasks]
-test = "robot --outputdir=results tests/"
-run = "task test"
+test = "robot --outputdir=reports tests/"
 
 [tool.poetry]
 package-mode = false

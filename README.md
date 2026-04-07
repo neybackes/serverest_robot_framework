@@ -275,8 +275,9 @@ Segue a seguir:
 
 - Instale as dependências Python com `poetry install`
 - Caso precise apontar para uma versão específica do Python, use `poetry env use 3.13`
-- Execute os testes pelo ambiente virtual do projeto com `poetry run robot -d ./reports ./tests/arquivo_na_pasta_test.robot`
-- Execute testes por tag com `poetry run robot -d ./reports -i TAG ./tests/arquivo_na_pasta_test.robot`
+- Comando oficial para rodar a suíte completa: `poetry run task test`
+- Para execuções direcionadas por arquivo, use `poetry run robot -d ./reports ./tests/arquivo_na_pasta_test.robot`
+- Para execuções por tag, use `poetry run robot -d ./reports -i TAG ./tests/arquivo_na_pasta_test.robot`
 - A API local continua sendo iniciada separadamente com `npx serverest`
 
   Este projeto está organizado seguindo os padrões Service Object permitindo que sua utilização seja simplificada e que cada Endpoint possa ser testado       individualmente.
@@ -291,8 +292,11 @@ Segue a seguir:
   
    <br>
    
+   Para executar a suíte completa utilize o comando oficial abaixo
+  - poetry run task test
+  
    Para realizar os testes por arquivo utilize o comando a seguir no seu terminal ou cmd
-  - robot -d ./reports ./tests/arquivo_na_pasta_test.robot  
+  - poetry run robot -d ./reports ./tests/arquivo_na_pasta_test.robot  
   <strong>Exemplo</strong>
   <br> 
         
@@ -306,7 +310,7 @@ Segue a seguir:
    
    Para executar um cenário de teste pela tag utilize o comando a seguir 
    
-   - robot -d ./reports -i TAG ./tests/arquivo_na_pasta_test.robot   
+   - poetry run robot -d ./reports -i TAG ./tests/arquivo_na_pasta_test.robot   
    <strong>Exemplo</strong>
   <br> 
   
