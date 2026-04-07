@@ -1,0 +1,21 @@
+{
+    "produto_para_cadastro":{
+        "nome": "Ideapad S145",
+        "preco": 2000,
+        "descricao": "Nootbook",
+        "quantidade": 400
+    },
+    "produto_para_alteracao":{
+        "nome": "Xbox One",
+        "preco": 1500,
+        "descricao": "Console",
+        "quantidade": 400
+    },
+    "produto_nome_repetido":{
+        "nome": "Samsung 60 polegadas",
+        "preco": 2000,
+        "descricao": "Outro Nootbook",
+        "quantidade": 400
+    }
+
+}

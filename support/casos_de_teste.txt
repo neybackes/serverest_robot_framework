@@ -1,0 +1,240 @@
+# Cenarios de teste API Serverest
+-----------------------------------
+
+
+- LOGIN
+    POST 
+        Validações Positivas        
+            - Validar Login 
+            - Status Code "200"
+            - Mensagem de retorno "realizado com sucesso"            
+        Validações Negativas
+            - Requisição com senha inválida                
+            - Requisicao com email inválido
+                - Status Code "401" # Na documentação era 400 -- REPORTAR --- 
+                - Mensagem de retorno "Email e/ou senha inválidos"
+            # Validações não estão na cobertura da documentação Serverest
+            - Requisicao com senha em branco ""
+                - Status Code "400"
+                - Mensagem de retorno "password não pode ficar em branco"
+            - Requisicao com email em branco ""
+                 - Status Code "400"
+                 - Mensagem de retorno "email não pode ficar em branco"
+- USUÁRIOS
+    POST 
+        Validaçoes Positivas 
+            - Cadastro Usuario 
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+                - Deve reornar um ID de cadastro
+        Validações Negativas
+            - Cadastro Usuario com email repetido 
+                - Status Code "400"
+                - Mensagem de retorno "Este email já está sendo usado"
+    GET
+        Validações Positivas
+            - Listar todos os usuários 
+                - Status Code "200" 
+                - Deve retornar todos os usuarios cadastrados 
+            - Listar usuario ID
+                - Status Code "200"
+                - Deve retorna usuario cadastrado pela ID
+        Validações Negativas
+            - Requisicao com ID invalido ou inexistente
+                - Status Code "400"
+                - Mensagem de retorno "Usuário não encontrado"   
+     PUT 
+        Validaçoes Positivas
+            - Alteração cadastro de usuario 
+                - Status Code "200"
+                - Mensagem de retorno "Registro alterado com sucesso"
+        Validaçoes Negativas
+            - Alteracao de cadastro com ID que não existe
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+            - Alteracao de cadastro com email repetido 
+                - Status Code "400"
+                - Mensagem "Este email já está sendo usado"
+    DELETE
+        Validações Positivas
+            - Deletar um usuario cadastrado 
+                - Status Code "200"
+                - Mensagem de retorno "Registro excluído com sucesso"
+        Validacoes Negativas
+            - Deletar um usuario que não existe 
+                - Status Code "200"
+                - Mensagem de retorno "Nenhum registro excluído" -- REPORTAR -- Não seria "400" 
+            - Deletar um usuario com carrinho cadastrado
+                - Status code "400" 
+                - Mensagem de retorno "Não é permitido excluir usuário com carrinho cadastrado"
+- PRODUTOS
+    POST
+        Validações Positivas 
+            - Cadastro Produto
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+                - Deve retornar um ID de cadastro
+        Validações Negativas
+            - Cadastro de produto com nome que ja existe
+                - Status Code "400"
+                - Mensagem de retorno "Já existe produto com esse nome"           
+            - Cadastro com Token Invalido / Ausente
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cadastro com Token de Usuário inexistente
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cadastro com Token Expirado #não automatizado 
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cadastro Rota Exclusiva para Admnistradores
+                 - Status Code "403"
+                - Mensagem de retorno "Rota exclusiva para administradores"
+    GET
+        Validações Positivas
+            - Listar todos os produtos
+                - Status Code "200" 
+            - Listar produto ID
+                - Status Code "200" 
+        Validações Negativas
+            - Requisicao com ID invalido ou inexistente
+                - Status Code "400"
+                - Mensagem de retorno "Produto não encontrado"
+     PUT
+        Validações Positivas
+            - Alteraçao de Produto
+                - Status Code "200"
+                - Mensagem de retorno "Registro alterado com sucesso"
+        Validações Negativas
+            - Alterar Produto Sem Cadastro
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+                - Deve retornar ID
+            - Alteracao de Produto com ID que não existe
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+             - Alteracao de Produto com Nome Repetido 
+                - Status Code "400"
+                - Mensagem "Já existe produto com esse nome"
+            - Alteração com Token Ausente/Invalido
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Alteração com Token de Usuário inexistente
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+             - Alteração com Token Expirado #não automatizado 
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Alteração Rota Exclusiva para Admnistradores
+                 - Status Code "403"
+                - Mensagem de retorno "Rota exclusiva para administradores" 
+     DELETE - /{_id}
+         Validações Positivas
+            - Deletar um produto cadastrado 
+                - Status Code "200"
+                - Mensagem de retorno "Registro excluído com sucesso"
+        Validacoes Negativas
+            - Deletar um produto que não existe #reportar não seria 400
+                - Status Code "200"
+                - Mensagem de retorno "Nenhum registro excluído"
+            - Deletar um produto com Token Ausente/Invalido
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Deletar um produto com Token de Usuário inexistente
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Deletar Produto com Token Expirado #não automatizado
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Deletar um produto com carrinho cadastrado
+                - Status code "400"
+                - Mensagem de retorno "Não é permitido excluir produto com carrinho cadastrado"
+            - Deletar um produto Rota Exclusiva para Admnistradores
+                 - Status Code "403"    
+                - Mensagem de retorno "Rota exclusiva para administradores" 
+- CARRINHO                
+    POST
+        Validações Positivas 
+            - Cadastro Carrinho
+                - Status Code "201"
+                - Mensagem de retorno "Cadastro realizado com sucesso"
+                - Deve retornar um ID de Carrinho
+        Validações Negativas
+            - Cadastro de produto duplicado
+                - Status Code "400"
+                - Mensagem de retorno "Não é permitido possuir produto duplicado"
+                - Deve retornar um ID do produto duplicado
+            - Cadastro de Carrinho com Carrinho já Cadastrado
+                - Status Code "400"
+                - Mensagem de retorno "Não é permitido ter mais de 1 carrinho"
+             - Cadastro de Carrinho com Produto Não Encontrado
+                 - Status Code "400"
+                - Mensagem de retorno "Produto não encontrado"
+                - Deve retornar o ID do produto e conteudo enviado
+            - Cadastro de Carrinho com Produto Insuficiente
+                 - Status Code "400"
+                - Mensagem de retorno "Produto não possui quantidade suficiente"
+                - Deve retornar o ID do produto e conteudo enviado                
+            - Cadastro de carrinho com Token Ausente/Invalido
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cadastro de Carrinho com Token de Usuário inexistente
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cadastro de Carrinho com Token Expirado #Não automatizado
+                - Status Code "401"
+                - Mensagem de retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+    GET
+        Validações Positivas
+            - Listar todos os produtos
+                - Status Code "200" 
+            - Listar produto ID
+                - Status Code "200" 
+        Validações Negativas
+            - Requisicao com ID invalido ou inexistente
+                - Status Code "400"
+                - Mensagem de retorno "Produto não encontrado"
+    DELETE /cancelar Compra
+        - Validações Positivas
+            - Cancelar Compra       
+                 - Status Code "200"
+                 - Mensagem de retorno "Registro excluído com sucesso" -- REPORTAR Registro excluído com sucesso. Estoque dos produtos reabastecido
+        - Validacões Negativas
+            - Cancelar Compra Sem Carrinho Cadastrado
+                - Status Code "200" 
+                - Mensagem de retorno "Não foi encontrado carrinho para esse usuário"
+            - Cancelar Compra  Token Invalido 
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token ausente
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token de Usuario Excluido
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token Expirado #nao automatizado
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+    DELETE Concluir Compra
+        - Validações Positivas
+            - Concluir Compra
+                 - Status Code "200"
+                 - Mensagem de retorno "Registro excluído com sucesso"
+        - Validacões Negativas
+            - Concluir Compra Sem Carrinho Cadastrado
+                - Status Code "200" 
+                - Mensagem de retorno "Não foi encontrado carrinho para esse usuário"
+            - Cancelar Compra  Token Invalido 
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token ausente
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token de Usuario Excluido
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            - Cancelar Compra com Token Expirado
+                 - Status Code "401"
+                 - Mensagem de Retorno "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais"
+            
+

@@ -1,0 +1,14 @@
+{
+    "login_valido":{
+        "email":"fulano@qa.com.br",
+        "password":"teste"
+    },
+    "login_adm_false":{
+        "email":"fulano@qa.com",
+        "password":"teste"
+    },
+    "login_usuario_excluido":{
+        "email":"testedeusuario@qa.com.br",
+        "password":"teste"
+    }
+}

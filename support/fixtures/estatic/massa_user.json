@@ -1,0 +1,30 @@
+{ 
+   
+    
+      "user_para_administrador_false":
+       {
+            "nome": "Ney Backes",
+            "email": "fulano@qa.com",
+            "password": "teste",
+            "administrador": "false"
+      },
+      "user_estatico_para_cadastro":
+      {
+            "nome": "teste",
+            "email": "testedeusuario@qa.com.br",
+            "password": "teste",
+            "administrador": "false"
+
+      },
+      "teste_usuario_correto":
+      {
+            "nome": "Fulano da Silva",
+            "email": "fulano@qa.com.br",
+            "password": "teste",
+            "administrador": "true"
+      }
+   
+     
+     
+
+}
