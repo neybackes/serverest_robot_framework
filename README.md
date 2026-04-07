@@ -271,6 +271,14 @@ Segue a seguir:
   
 # - Como utilizar este projeto e realizar os testes
 
+## Setup com Poetry
+
+- Instale as dependências Python com `poetry install`
+- Caso precise apontar para uma versão específica do Python, use `poetry env use 3.13`
+- Execute os testes pelo ambiente virtual do projeto com `poetry run robot -d ./reports ./tests/arquivo_na_pasta_test.robot`
+- Execute testes por tag com `poetry run robot -d ./reports -i TAG ./tests/arquivo_na_pasta_test.robot`
+- A API local continua sendo iniciada separadamente com `npx serverest`
+
   Este projeto está organizado seguindo os padrões Service Object permitindo que sua utilização seja simplificada e que cada Endpoint possa ser testado       individualmente.
   
  <div> 
