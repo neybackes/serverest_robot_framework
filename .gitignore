@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+reports/
+results/
+output.xml
+log.html
+report.html

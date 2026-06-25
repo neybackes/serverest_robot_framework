@@ -1,0 +1,5 @@
+[tool.robot]
+paths = ["tests"]
+outputdir = "reports"
+pythonpath = ["."]
+console = "dotted"

@@ -1,0 +1,16 @@
+{
+    "usuario_valido":{
+        "nome":"Fulano QA",
+        "email":"fulano@qa.com.br",
+        "password":"teste",
+        "administrador":"true"
+    },
+    "login_valido":{
+        "email":"fulano@qa.com.br",
+        "password":"teste"
+    },
+    "login_invalido":{
+        "email":"fulano@qa.com.br",
+        "password":"senha_errada"
+    }
+}

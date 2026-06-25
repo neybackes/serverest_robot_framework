@@ -1,7 +1,7 @@
 [project]
-name = "serverest-robot-framework"
-version = "0.1.0"
-description = "API Testing for ServeRest using Robot Framework."
+name = "robot-api-automation"
+version = "0.2.0"
+description = "Robot Framework API automation project organized by tests and reusable resources."
 readme = "README.md"
 requires-python = ">=3.10,<3.14"
 authors = [
@@ -10,17 +10,19 @@ authors = [
 dependencies = [
     "robotframework>=7.0,<8.0",
     "robotframework-requests>=0.9.7,<0.10.0",
-    "robotframework-faker>=5.0.0,<6.0.0",
     "requests>=2.32.0,<3.0.0",
     "faker>=37.0.0,<38.0.0",
 ]
+
 [dependency-groups]
 dev = [
     "taskipy (>=1.14.1,<2.0.0)"
-] 
+]
 
 [tool.taskipy.tasks]
-test = "robot --outputdir=reports tests/"
+test = "robot -d reports tests/"
+test_login = "robot -d reports tests/login/"
+test_users = "robot -d reports tests/users/"
 
 [tool.poetry]
 package-mode = false
